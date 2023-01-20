@@ -375,6 +375,7 @@ int main(int argc, char** argv)
 #ifdef EGL_EXT_device_base
     if (clientExts && strstr(clientExts, "EGL_EXT_device_base") != nullptr)
         printDevices();
+    cout << endl << "Done printing all devices." << endl << endl;
 #endif
 
     EGLDisplay display = eglGetDisplay(EGL_DEFAULT_DISPLAY);
