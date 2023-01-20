@@ -225,7 +225,8 @@ static void printDisplay(EGLDisplay display, const char* indent = "")
     EGLint majorVersion, minorVersion;
     if (!eglInitialize(display, &majorVersion, &minorVersion)) {
         cerr << "Could not initialize EGL!" << endl;
-        exit(1);
+	return;
+        //exit(1);
     }
 
     cout << indent << "EGL version: " << majorVersion << "." << minorVersion << endl;
